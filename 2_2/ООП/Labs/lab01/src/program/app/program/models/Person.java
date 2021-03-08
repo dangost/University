@@ -4,24 +4,25 @@ public class Person {
     // Ф.И.О. студента, номер группы, основной
     //вид деятельности, увлечения и главный жизненный лозунг
 
-    public Person(String surname, String name, Integer group, String mainLifeLyric) {
-        this.Surname = surname;
-        this.Name = name;
-        this.Group = group;
-        this.MainLifeLyric = mainLifeLyric;
+    public Person(String Surname, String Name, Integer Group, String MainLifeLyric) {
+        this.surname = Surname;
+        this.name = Name;
+        this.group = Group;
+        this.mainLifeLyric = MainLifeLyric;
     }
 
-    public String Surname;
+    public String surname;
 
-    public String Name;
+    public String name;
 
-    public Integer Group;
+    public Integer group;
 
-    public String MainLifeLyric;
+    public String mainLifeLyric;
 
-    public String ToString()
+    @Override
+    public String toString()
     {
-        return this.Name + "\t" + this.Surname + "\t" + this.Name + "\t" + this.Group.toString() + "\t" + this.MainLifeLyric;
+        return this.name + "\t" + this.surname +  "\t" + this.group.toString() + "\t" + this.mainLifeLyric;
     }
 
 }
