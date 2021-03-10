@@ -19,10 +19,10 @@ public class Person {
 
     public String mainLifeLyric;
 
-    @Override
-    public String toString()
-    {
-        return this.name + "\t" + this.surname +  "\t" + this.group.toString() + "\t" + this.mainLifeLyric;
-    }
+//    @Override
+//    public String toString()
+//    {
+//        return this.name + "\t" + this.surname +  "\t" + this.group.toString() + "\t" + this.mainLifeLyric;
+//    }
 
 }
