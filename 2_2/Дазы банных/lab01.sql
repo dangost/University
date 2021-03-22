@@ -32,6 +32,7 @@ create table Report(
     timeOfExport time,
     cargoWeight int,
     returnDate text not null,
+    distanse int,
     foreign key (carId) references Cars(carId),
     foreign key (driverId) references Drivers(driverId)    
 );
@@ -79,19 +80,19 @@ values (246, 2077, 3, 4);
 insert into Cars (modelCode, releaseYear, markCode, carNum)
 values (246, 2077, 3, 2);
 
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (1, 1, "02-02-2021", "15:00", 50, "05-02-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (1, 4, "04-02-2021", "15:00", 150, "10-02-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (2, 1, "02-02-2021", "15:00", 200, "05-03-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (3, 1, "10-03-2021", "15:00", 170, "14-04-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (1, 4, "01-05-2021", "15:00", 200, "05-08-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (3, 2, "04-07-2021", "15:00", 1000, "16-08-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (1, 1, "08-07-2021", "15:00", 300, "20-09-2021");
-insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate)
-values (2, 2, "01-09-2021", "15:00", 200, "21-10-2021");
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (1, 1, "02-02-2021", "15:00", 50, "05-02-2021", 200);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (1, 4, "04-02-2021", "15:00", 150, "10-02-2021", 500);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (2, 1, "02-02-2021", "15:00", 200, "05-03-2021", 850);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (3, 1, "10-03-2021", "15:00", 170, "14-04-2021", 1500);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (1, 4, "01-05-2021", "15:00", 200, "05-08-2021", 750);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (3, 2, "04-07-2021", "15:00", 1000, "16-08-2021", 600);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (1, 1, "08-07-2021", "15:00", 300, "20-09-2021", 800);
+insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
+values (2, 2, "01-09-2021", "15:00", 200, "21-10-2021",400 );
