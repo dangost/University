@@ -7,7 +7,7 @@ create table Drivers(
     driverName text,
     driverSurname text,
     driverCode int,
-    driverDOB text
+    driverDOB date
     );
     
 create table Models(
@@ -51,19 +51,19 @@ insert into Models (modelName, payloadCapacity)
 value ("Tesla Model Z", 41414);
 
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("John", "Wake", 228, '05-06-2002');
+values ("John", "Wake", 228, '2002-05-06');
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("Kill", "Real", 228, "08-07-2003");
+values ("Kill", "Real", 228, "2003-08-07");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("Dan", "Equal", 228, "09-01-2005");
+values ("Dan", "Equal", 228, "2005-09-01");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("Hill", "Hil", 228, "25-08-2007");
+values ("Hill", "Hil", 228, "2007-10-08");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("Title", "Leak", 228, "14-12-2008");
+values ("Title", "Leak", 228, "2008-09-12");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("Json", "Xml", 228, "17-11-2010");
+values ("Json", "Xml", 228, "2010-05-11");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("Billy", "Hil", 228, "12-10-2021");
+values ("Billy", "Hil", 228, "2021-12-10");
 
 insert into Cars (modelCode, releaseYear, markCode, carNum)
 values (228, 2002, 4, 1);
