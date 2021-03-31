@@ -29,8 +29,6 @@ namespace lab_4
             func2 = Math.Sin;
         }
 
-
-
         private void ReDrawGraph(object sender, EventArgs e)
         {
             bool bottom_flag1 = double.TryParse(f1_bottomBox.Text, out double bottom1);
