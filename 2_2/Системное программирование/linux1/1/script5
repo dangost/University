@@ -1,0 +1,8 @@
+#!/bin/bash
+echo Task5;
+x=0;
+for i in {0..10}
+do
+let x="x+i"
+done
+echo $x

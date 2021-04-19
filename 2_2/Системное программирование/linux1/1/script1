@@ -1,0 +1,14 @@
+cccc
+
+#!/bin/bash
+echo Task1
+
+if [[ -f script1 && -f script2 ]]
+  then
+    while read line
+     do
+     echo "$line" >> file_2
+    done < script1
+else
+  echo "There is no file"
+fi

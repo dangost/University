@@ -1,0 +1,21 @@
+#!/bin/bash
+
+STRING="#!/bin/bash"
+SELFNAME="script4"
+
+for entry in *; do
+	if [ "$entry" != "$SELFNAME" ];
+	then
+		file="$entry"
+		while read line; do
+
+			if [ "$line" = "$STRING" ];
+			then	
+					bash $entry
+			else
+				echo not a bash script
+			fi		
+			break
+		done < $file
+	fi
+done

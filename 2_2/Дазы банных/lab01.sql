@@ -64,6 +64,8 @@ insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
 values ("Json", "Xml", 228, "2010-05-11");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
 values ("Billy", "Hil", 228, "2021-12-10");
+insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
+values ("Billy", "Hil", 228, "1930-12-10");
 
 insert into Cars (modelCode, releaseYear, markCode, carNum)
 values (228, 2002, 4, 1);
@@ -77,15 +79,13 @@ insert into Cars (modelCode, releaseYear, markCode, carNum)
 values (246, 2077, 3, 5);
 insert into Cars (modelCode, releaseYear, markCode, carNum)
 values (246, 2077, 3, 6);
-insert into Cars (modelCode, releaseYear, markCode, carNum)
-values (246, 2077, 3, 1);
 
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
-values (1, 1, "2020-02-02", "15:00", 50, "2021-05-02", 200);
+values (1, 1, "2020-02-02", "15:00", 50, "2021-10-04", 200);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
-values (1, 4, "2020-04-02", "15:00", 150, "2021-10-02", 500);
+values (1, 4, "2020-04-02", "15:00", 150, "2021-10-04", 500);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
-values (2, 1, "2021-02-02", "15:00", 200, "2021-05-03", 850);
+values (2, 1, "2021-02-02", "15:00", 200, "2021-10-04", 850);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
 values (3, 1, "2021-10-03", "15:00", 170, "2021-10-04", 1500);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)

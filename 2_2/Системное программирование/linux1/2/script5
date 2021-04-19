@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sort main>t11.txt
+cp t11.txt main
+cat main

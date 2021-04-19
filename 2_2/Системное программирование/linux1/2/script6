@@ -1,0 +1,6 @@
+#!/bin/bash
+sort temp11 > t
+sort main>love
+touch final
+echo $(comm -12 t love) >> final
+wc -w < final

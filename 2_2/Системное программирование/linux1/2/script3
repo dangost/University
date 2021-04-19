@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Enter the surname: "
+read surname
+cut -d":" -f1,3 basa_2a.txt | grep $surname

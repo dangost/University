@@ -1,0 +1,4 @@
+#!/bin/bash
+touch result
+echo $(sort -n -k2 basa.txt) >> result
+cut -d":" -f1 result

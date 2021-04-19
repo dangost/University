@@ -1,0 +1,16 @@
+#!/bin/bash
+echo Task3
+
+file="list.txt"
+
+if [ -f $file ]; then
+  rm $file
+fi
+
+touch $file
+
+for entry in *; do
+	if [[ "$entry" == "script"* ]]; then
+	   echo $entry >> $file
+	fi
+done

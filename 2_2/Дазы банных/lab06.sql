@@ -9,7 +9,7 @@
 
 use localdb;
 
-create table LongJourneys as select * from Report where datediff(Report.returnDate, Report.dateOfExport) > 3;
+create table LongJourneys as select * from Report where datediff(Report.returnDate, Report.dateOfExport) < 3;
 select * from LongJourneys;
 drop table LongJourneys;
 
@@ -21,7 +21,7 @@ alter table Cars drop column admissionYear;
 create index CarsIndex on Cars(releaseYear, carNum);
 alter table Cars drop index CarsIndex;
 
-delete from Cars where Cars.releaseYear - year(now())  > 20;
+delete from Cars where year(now()) - Cars.releaseYear  > 20;
 select * from Cars;
 
 delete from Drivers where year(now()) - year(Drivers.driverDOB) > 65;

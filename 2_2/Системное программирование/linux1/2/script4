@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Введите фамилию: "
+read surname
+cut -d":" -f1,3 basa.txt | grep $surname | sed "s/$surname: //g"

@@ -1,0 +1,7 @@
+#!/bin/bash
+echo select any script from list
+ls -f script*
+echo input your selection
+read fil
+echo $fil
+bash $fil

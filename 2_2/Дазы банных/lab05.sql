@@ -14,7 +14,7 @@ use localdb;
 -- 2. Составить список автомобилей, выезжавших в рейс с интервалом менее двух дней.
 -- 3. Составить список автомобилей одновременно выезжавших на прошлой неделе. 
 
-select * from Report inner join Drivers on Report.driverId = Drivers.driverId where Drivers.driverSurname = "Syl"; # current surname 
+select * from Report inner join Drivers on Report.driverId = Drivers.driverId where Drivers.driverSurname = "Wake"; # current surname 
 
 select * from Report inner join Drivers on Report.driverId = Drivers.driverId inner join Cars on Cars.carId = Report.carId inner join Models on Models.modelId = Cars.carNum where Report.dateOfExport between date_sub(now(),interval 1 year) and now();
 
