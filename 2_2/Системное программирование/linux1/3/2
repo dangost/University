@@ -1,4 +1,4 @@
 #!/bin/bash
 touch file1
-echo $(sort -n -k2 basa)>>file1
+echo $(sort -n -k2 basa.txt)>>file1
 cut -d":" -f3 file1
