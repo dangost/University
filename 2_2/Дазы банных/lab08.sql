@@ -19,7 +19,7 @@ call getCarNums(2077);
 DELIMITER //
 create procedure Birthdays ()
 begin
-	select driverId from Drivers where driverDOB between date_sub(now(),interval 1 day) and now();
+	select driverId from Drivers where  driverDOB = curname() + 1;
 end //
 call Birthdays();
 

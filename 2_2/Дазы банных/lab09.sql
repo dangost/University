@@ -29,7 +29,7 @@ begin
 	select carId from Report where dateOfExport = _date;
 end //
 
-call CarTable("2021-10-03");
+call CarTable("2020-02-02");
 
 DELIMITER //
 create procedure TimeTable()

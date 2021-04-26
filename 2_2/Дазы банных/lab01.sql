@@ -51,7 +51,7 @@ insert into Models (modelName, payloadCapacity)
 value ("Tesla Model Z", 41414);
 
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
-values ("John", "Wake", 228, '2002-05-06');
+values ("John", "Wake", 228, '2002-04-18');
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
 values ("Kill", "Real", 228, "2003-08-07");
 insert into Drivers (driverName, driverSurname, driverCode, driverDOB)
@@ -85,9 +85,9 @@ values (1, 1, "2020-02-02", "15:00", 50, "2021-10-04", 200);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
 values (1, 4, "2020-04-02", "15:00", 150, "2021-10-04", 500);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
-values (2, 1, "2021-02-02", "15:00", 200, "2021-10-04", 850);
+values (2, 1, "2020-04-02", "15:00", 200, "2021-10-04", 850);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
-values (3, 1, "2021-10-03", "15:00", 170, "2021-10-04", 1500);
+values (3, 1, "2020-04-02", "15:00", 170, "2021-10-04", 1500);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
 values (1, 4, "2021-01-05", "15:00", 200, "2021-05-08", 750);
 insert into Report (carId, driverId, dateOfExport, timeOfExport, cargoWeight, returnDate, distanse)
