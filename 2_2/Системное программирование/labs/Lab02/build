@@ -1,5 +1,7 @@
 #!/bin/sh
 
-g++ extra.cpp
+g++ -E extra.cpp -o extra.ii
+
+g++ -S extra.ii -o extra.s
 
 ./a.out

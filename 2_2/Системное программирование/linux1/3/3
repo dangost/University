@@ -1,3 +1,4 @@
 #!/bin/bash
-find ~/"Desktop" -type f -name "script*">list
+find ./ -type f -name "script*">list
 sort list
+echo $list
