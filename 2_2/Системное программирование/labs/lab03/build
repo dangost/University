@@ -1,5 +1,5 @@
 #!/bin/sh
 
-g++ *.cpp *.h
-
+make -s
 ./a.out
+make clean -s
