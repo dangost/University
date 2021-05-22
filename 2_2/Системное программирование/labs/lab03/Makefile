@@ -1,6 +1,13 @@
-all:
-	g++ *.cpp *.h
+all: lab
+
+lab: main.o funcs.o
+	g++ main.o funcs.o -o lab
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+factorial.o: funcs.cpp
+	g++ -c funcs.cpp
 
 clean:
-	rm a.out
-	rm funcs.h.gch
+	rm -rf *.o lab

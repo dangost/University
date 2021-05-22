@@ -1,5 +1,9 @@
 #!/bin/sh
 
 make -s
-./a.out
+
+chmod a+x lab
+
+./lab
+
 make clean -s
