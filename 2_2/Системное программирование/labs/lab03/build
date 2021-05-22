@@ -1,9 +1,5 @@
 #!/bin/sh
 
-make -s
+g++ *.cpp *.h
 
-chmod a+x lab
-
-./lab
-
-make clean -s
+./a.out
