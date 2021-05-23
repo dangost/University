@@ -1,5 +1,5 @@
 #include <iostream>
-#include "funcs.h"
+#include "logic.h"
 
 using namespace std;
 
@@ -8,6 +8,16 @@ using namespace std;
     наименьший элементы и поменять их местами. Найти сумму и произведение
     всех элементов массива.
  */
+
+void printArray(double array[], int len)
+{
+    for(int i = 0; i < len; i++)
+    {
+        cout << array[i] << " ";
+    }
+
+    cout << "\n";
+}
 
 
 int main()
@@ -47,7 +57,4 @@ int main()
     double pow = findPowOfFull(array, len);
 
     cout << "Sum: " << sum << "\t" << "Pow: " << pow << endl;
-
-
 }
-

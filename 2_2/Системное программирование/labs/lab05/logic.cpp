@@ -1,6 +1,4 @@
-#include "funcs.h"
-
-using namespace std;
+#include "logic.h"
 
 int findMaxIndex(double array[], int len)
 {
@@ -58,14 +56,4 @@ double findPowOfFull(double array[], int len)
     }
 
     return pow;
-}
-
-void printArray(double array[], int len)
-{
-    for(int i = 0; i < len; i++)
-    {
-        cout << array[i] << " ";
-    }
-
-    cout << "\n";
 }

@@ -1,13 +1,10 @@
-all: lab
-
-lab: main.o funcs.o
-	g++ main.o funcs.o -o lab
-
+out: main.o libtable.so
+	g++ -o lab main.o -L. -ltable -Wl,-rpath,.
 main.o: main.cpp
-	g++ -c main.cpp
-
-factorial.o: funcs.cpp
-	g++ -c funcs.cpp
-
+	g++ -c $^
+libtable.so: logic.o
+	g++ -shared -o $@ $^
+logic.o: logic.cpp
+	g++ -fPIC -c $^
 clean:
-	rm -rf *.o lab
+	rm -f *.o out *.so
