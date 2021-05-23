@@ -1,0 +1,9 @@
+#!/bin/sh
+
+make
+
+chmod a+x lab
+
+./lab
+
+make clean
