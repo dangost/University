@@ -2,6 +2,13 @@ drop database localdb;
 create database localdb;
 use localdb;
 
+CREATE TABLE Log (
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+_datetime timestamp,
+statusCode text,
+newRowId int
+);
+
 create table Drivers(
 	driverId int not null primary key auto_increment,
     driverName text,
@@ -36,6 +43,11 @@ create table Report(
     foreign key (carId) references Cars(carId),
     foreign key (driverId) references Drivers(driverId)    
 );
+
+
+# --------------------------
+
+# --------------------------
 
 insert into Models (modelName, payloadCapacity)
 value ("Tesla Model X", 100);
