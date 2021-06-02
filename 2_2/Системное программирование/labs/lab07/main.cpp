@@ -24,7 +24,6 @@ int main()
     
     pthread_create(&readThread, NULL, &fillArray, &targ);
     pthread_join(readThread, NULL);
-
     pthread_create(&printConsoleThread, NULL, printArray, &targ);
     pthread_create(&printFileThread, NULL, printArrayFile, &targ);
     

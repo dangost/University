@@ -1,10 +1,10 @@
-out: main.o libtable.so
-	g++ -o lab main.o -L. -ltable -Wl,-rpath,.
+out: main.o libtable.a
+	g++ -o labS main.o -L. -lworld
 main.o: main.cpp
 	g++ -c $^
-libtable.so: logic.o
-	g++ -shared -o $@ $^
+libtable.a: logic.o
+	ar cr libworld.a logic.o
 logic.o: logic.cpp
 	g++ -fPIC -c $^
 clean:
-	rm -f *.o out *.so
+	rm -f *.o out *.a

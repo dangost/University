@@ -1,0 +1,14 @@
+binary: main.o libworld.a
+    g++ -o binary main.o -L. -lworld
+
+main.o: main.cpp
+    g++ -c main.cpp
+
+libworld.a: g_world.o
+    ar cr libworld.a g_world.o
+
+g_world.o: g_world.cpp
+    g++ -c g_world.cpp
+
+clean:
+    m -f *.o *.a binary
