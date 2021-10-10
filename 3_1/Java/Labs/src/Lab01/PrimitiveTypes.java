@@ -20,5 +20,9 @@ public class PrimitiveTypes {
         System.out.println("char c = " + c);
         System.out.println("String str = " + str);
         System.out.println("boolean b = " + b);
+
+        /*
+
+         */
     }
 }

@@ -27,8 +27,6 @@ void polling(int id, int server_sockfd, sockaddr_un client_address, int client_l
         write(clientsock_fd, &num, sizeof(int));
         sleep(1);
     }
-
-    
 }
 
 int main()

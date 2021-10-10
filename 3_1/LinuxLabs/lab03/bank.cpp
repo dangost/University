@@ -38,6 +38,11 @@ void bank(int sig)
     cout << "Bank return response! " << score << "\n" << endl;
     sleep(1);
 
+    if (score > 100)
+    {
+        exit(0);
+    }
+
     (void) signal(SIGUSR1, user);
     raise(SIGUSR1);
 }

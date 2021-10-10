@@ -18,7 +18,7 @@ public class Casting {
         System.out.println("price = "+price);
         System.out.println("money = "+money);
 
-        iq =(byte) height;
+        iq =(byte)height;
         distance=height;
         sex=(char) money;
 

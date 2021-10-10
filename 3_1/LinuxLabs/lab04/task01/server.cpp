@@ -43,7 +43,4 @@ int main()
     }
 
     close(clientsock_fd);
-
-
-    
 }
