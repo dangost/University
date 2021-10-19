@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <sys/msg.h>
 #include <iostream>
+#include <thread>
 
 #define MAX_TEXT 512
 
@@ -16,24 +17,16 @@ struct message
     char payload[BUFSIZ];
 };
 
-int main()
+void sending(int msgid)
 {
     int running = 1;
-    int msgid;
-    struct message data;
-    char buffer[BUFSIZ];
 
-    msgid = msgget((key_t) 1234, 0666 | IPC_CREAT);
-
-    if (msgid == -1)
+    while(running) 
     {
-        cout << "msget failed!";
-        exit(EXIT_FAILURE);
-    }
+        struct message data;
+        long int message_to_recieve = 0;
+        char buffer[BUFSIZ];
 
-    while(running)
-    {
-        cout << "enter some text" << endl;
         fgets(buffer, BUFSIZ, stdin);
 
         data.message_type = 1;
@@ -45,12 +38,17 @@ int main()
             cout << "msget failed!";
             exit(EXIT_FAILURE);
         }
-        
-        if (strncmp(buffer, "end", 3))
-        {
-            running = 0;
-        }
-        cout << "servermsg ended!" << endl;
-        exit(EXIT_SUCCESS);
     }
+    cout << "return";
+}
+
+int main()
+{
+    int msgid_1, msgid_2;
+
+    msgid_1 = msgget((key_t) 1234, 0666 | IPC_CREAT);
+    msgid_2 = msgget((key_t) 1235, 0666 | IPC_CREAT);
+
+    sending(msgid_1);
+
 }

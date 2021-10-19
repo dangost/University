@@ -15,7 +15,7 @@ struct message
     char payload[BUFSIZ];
 };
 
-void running()
+void running(int client_id, int q_id)
 {
     int running = 1;
     int msgid;
@@ -23,7 +23,7 @@ void running()
 
     long int message_to_recieve = 0;
 
-    msgid = msgget((key_t) 1234, 0666 | IPC_CREAT);
+    msgid = msgget((key_t) q_id, 0666 | IPC_CREAT);
     if (msgid == -1)
     {
         cout << "msget failed";
@@ -38,7 +38,7 @@ void running()
             exit(EXIT_FAILURE);
         }
 
-        cout << "Client " << "Text captured: " << data.payload << endl;
+        cout << "Client "<< client_id << " Text captured: " << data.payload << endl;
 
         if (strncmp(data.payload, "end", 3) == 0)
         {
@@ -59,8 +59,15 @@ void running()
 
 int main()
 {
-    thread client_2(running);
+    cout << "Client 1" << endl;
+    thread client_1(running, 1, 1234);
+
+    cout << "Client 2" << endl;
+    thread client_2(running, 2, 1234);
+
+    client_1.join();
     client_2.join();
+
 
     return 0;
 }
