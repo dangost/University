@@ -2,8 +2,8 @@ from decryptor import KeysSum
 
 coder = KeysSum()
 
-_key = "HyjI12q"
-_value = "London is The Capital of Great Britain!"
+_key = input("Input key: ")
+_value = input("\nInput value: ")
 
 encoded = coder.encrypt(_key, _value)
 print(encoded)

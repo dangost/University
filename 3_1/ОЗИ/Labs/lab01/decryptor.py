@@ -1,10 +1,6 @@
 class KeysSum:
     def __init__(self):
-        self._alphabet = "abcdefghijklmnopqrstuvwxyz" \
-                        "ABCDEFGHIJKLMNOPQRSTUVWXYZ" \
-                        "~`!@#$%^&*()-_=+" \
-                        "0123456789" \
-                        " "
+        self._alphabet = "abcdefghijklmnopqrstuvwxyz"
 
         self._alpha_len = len(self._alphabet)
 
@@ -14,10 +10,10 @@ class KeysSum:
             key += key
         result = ""
         for i in range(value_len):
-            x = self._alphabet.find(value[i])
-            k = self._alphabet.find(key[i])
+            x = self._alphabet.find(value[i]) + 1
+            k = self._alphabet.find(key[i]) + 1
             y = (x + k) % self._alpha_len
-            result += self._alphabet[y]
+            result += self._alphabet[y-1]
         return result
 
     def decrypt(self, key, value):
@@ -26,8 +22,8 @@ class KeysSum:
             key += key
         result = ""
         for i in range(value_len):
-            y = self._alphabet.find(value[i])
-            k = self._alphabet.find(key[i])
+            y = self._alphabet.find(value[i]) + 1
+            k = self._alphabet.find(key[i]) + 1
             x = (y - k) % self._alpha_len
-            result += self._alphabet[x]
+            result += self._alphabet[x-1]
         return result
